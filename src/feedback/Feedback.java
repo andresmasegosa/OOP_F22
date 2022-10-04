@@ -1,0 +1,43 @@
+package feedback;
+
+import io.github.stepio.jgforms.Configuration;
+import io.github.stepio.jgforms.Submitter;
+import io.github.stepio.jgforms.answer.Builder;
+import io.github.stepio.jgforms.exception.NotSubmittedException;
+
+import java.io.IOException;
+import java.net.URL;
+import java.security.GeneralSecurityException;
+import java.util.Calendar;
+
+import static feedback.FeedbackForm.*;
+
+
+public class Feedback {
+
+    public static void submit(String excercise_id, boolean finished, boolean understood, String comment) {
+        try {
+
+            URL url = Builder.formKey("1FAIpQLScKYc-5Lz5VcIhIgLODBkVAkuGh2a8TiKiMLMX3zBX5sTMxyQ")
+                    .put(EXERCISE_ID, excercise_id)
+                    .put(FINISHED, (finished)? "Yes": "No")
+                    .put(UNDERSTOOD, (understood)? "Yes": "No")
+                    .put(COMMENT, comment)
+                    .toUrl();
+
+            System.out.println(url);
+            Submitter submitter = new Submitter(
+                    new Configuration()
+            );
+
+            submitter.submitForm(url);
+            System.out.println("********************************************");
+            System.out.println("Feedback submitted for the exercise. Thanks! :)");
+            System.out.println("********************************************");
+
+
+        } catch (Exception ex) {
+
+        }
+    }
+}
