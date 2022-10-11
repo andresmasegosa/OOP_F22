@@ -11,6 +11,7 @@ public class Stack<T> {
     T pop() {
         return stack[--count];
     }
+
     void push(T o) {
         stack[count++]=o;
     }

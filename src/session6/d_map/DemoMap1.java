@@ -10,6 +10,7 @@ public class DemoMap1 {
         birthYear.put("George Washington", 1732);
         birthYear.put("Abraham Lincoln", 1809);
         birthYear.put("Barack Obama", 1961);
+        birthYear.put("Donald Trump", 1946);
 
         Integer obamaYear = birthYear.get("Barack Obama");
 

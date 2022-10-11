@@ -19,5 +19,8 @@ public class A_DemoSet {
 
         System.out.println(size);
 
+        for (String card : cards) {
+            System.out.println(card);
+        }
    }
 }

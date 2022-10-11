@@ -1,8 +1,11 @@
 package session6.c_set;
 
 
+import com.sun.source.tree.Tree;
+
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 /**
@@ -13,7 +16,7 @@ import java.util.Set;
  */
 public class B_DemoCard {
     public static void main(String[] args) {
-        Set<Card> cards = new HashSet<>();
+        Set<Card> cards = new TreeSet<>();
 
         cards.add(new Card("Ace of Hearts"));
         cards.add(new Card("Ace of Hearts"));
@@ -25,6 +28,18 @@ public class B_DemoCard {
         int size = cards.size();
         System.out.println(size);
 
+        /***** UNCOMMENT BELOW TO PROVIDE FEEDBACK ****/
+        /*
+        //Did you have time to finish the exercise?
+        boolean I_did_finish = true;
 
+        //Did you understand the concepts used in the exercise?
+        boolean I_did_understand = true;
+
+        //Any comments
+        String comment = "No comments";
+
+        feedback.Feedback.submit("session6_C", I_did_finish, I_did_understand, comment);
+        */
     }
 }

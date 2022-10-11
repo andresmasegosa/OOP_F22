@@ -1,4 +1,4 @@
-package session6.d_map.exercise;
+package session6.d_map.solution;
 
 /**
  * Exercise: Implementing ChessBoard using a Map<Position,ChessPiece> object.
@@ -35,7 +35,7 @@ public class Exercise {
         //Any comments
         String comment = "No comments";
 
-        feedback.Feedback.submit("session6_D", I_did_finish, I_did_understand, comment);
-        */
+        feedback.Feedback.submit("session3_C_Bishop", I_did_finish, I_did_understand, comment);
+    */
     }
 }

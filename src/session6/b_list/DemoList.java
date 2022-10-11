@@ -6,6 +6,7 @@ import java.util.List;
 public class DemoList {
 
     public static void main(String[] args) {
+
         List<String> cards = new ArrayList<>();
 
         cards.add("Ace of Hearts");
@@ -22,6 +23,10 @@ public class DemoList {
         //Print all elements of the list using a for-loop
         for (String card : cards) {
             System.out.println(card);
+        }
+
+        for (int i = 0; i < cards.size(); i++) {
+            System.out.println(cards.get(i));
         }
 
     }
