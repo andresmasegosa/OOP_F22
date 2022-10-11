@@ -5,10 +5,7 @@ import io.github.stepio.jgforms.Submitter;
 import io.github.stepio.jgforms.answer.Builder;
 import io.github.stepio.jgforms.exception.NotSubmittedException;
 
-import java.io.IOException;
 import java.net.URL;
-import java.security.GeneralSecurityException;
-import java.util.Calendar;
 
 import static feedback.FeedbackForm.*;
 

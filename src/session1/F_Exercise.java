@@ -1,6 +1,5 @@
 package session1;
 
-
 /**
  * What is wrong with line 15? Try to fix it.
  */
@@ -27,7 +26,7 @@ public class F_Exercise {
         //Any comments
         String comment = "No comments";
 
-        feedback.Feedback.submit("session1_F", I_did_finish, I_did_understand, comment);
+        Feedback.submit("session1_F", I_did_finish, I_did_understand, comment);
         */
 
     }
