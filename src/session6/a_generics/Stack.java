@@ -5,7 +5,7 @@ public class Stack<T> {
     int count=0;
 
     public Stack() {
-        //stack = (T[]) new Object[100];
+        stack = (T[]) new Object[100];
     }
 
     T pop() {
@@ -14,17 +14,5 @@ public class Stack<T> {
     void push(T o) {
         stack[count++]=o;
     }
-    void printStack(){
-        for(T o  : stack){
-            System.out.println(o);
-        }
-    }
 
-    public static void main(String[] args) {
-        Stack stack = new Stack();
-        stack.push(new Giraff());
-        stack.push(new Book());
-        stack.printStack();
-    }
 }
-

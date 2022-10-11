@@ -20,6 +20,8 @@ public class ChessBoard {
 
     public boolean moveChessPiece(ChessPiece piece, int newX, int newY){
         boolean success = piece.isLegalTheMovement(newX,newY);
+        if (!success)
+            return false;
         this.pieces[piece.getX()][piece.getY()]=null;
         this.pieces[newX][newY]=piece;
         piece.setX(newX);

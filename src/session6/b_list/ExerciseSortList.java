@@ -6,13 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Exercise: Create a new comparator that allows ordering the String objects of a List
- * by their length (i.e. shortest strings come first).
+ * Exercise: Create a new comparator that allows ordering the String objects of a List by their length (i.e. shortest strings come first).
  */
-
-/**
-* Suggested solution
-* */
 public class ExerciseSortList {
 
     public static void main(String[] args) {
@@ -24,7 +19,7 @@ public class ExerciseSortList {
         cards.add("Ace of Hearts");
         cards.add("Two of Clubs");
 
-        Comparator<String> comparator = new LengthOrder();
+        Comparator<String> comparator = new StringAlphabeticalOrder();
         Collections.sort(cards, comparator);
 
         for (String card: cards){
