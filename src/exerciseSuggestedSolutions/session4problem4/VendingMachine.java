@@ -1,6 +1,7 @@
 package exerciseSuggestedSolutions.session4problem4;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class VendingMachine {
     //list of products
@@ -19,7 +20,9 @@ public class VendingMachine {
     }
 
     public void printInventory(){
-        this.products.forEach((p,a) -> System.out.println(p.toString()+" amount left: "+a));
+        for (Map.Entry<Product,Integer> entry : products.entrySet()){
+            System.out.println(entry.getKey().toString()+" amount left: "+entry.getValue().toString());
+        }
     }
 
 
