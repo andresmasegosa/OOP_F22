@@ -8,11 +8,6 @@ public class InsufficientFundsException extends RuntimeException {
         this.deficit = deficit;
     }
 
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
-
     public int getDeficit() {
         return deficit;
     }

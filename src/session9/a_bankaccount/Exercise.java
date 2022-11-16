@@ -17,14 +17,15 @@ public class Exercise {
         System.out.println("Current Account Balance: "+account.getBalance());
 
         System.out.println("Enter an amount to deposit:");
+        int amount = scanner.nextInt();
 
         try{
-            int amount = scanner.nextInt();
+
             account.deposit(amount);
+            System.out.println("Everything was fine!");
+
         } catch (IllegalArgumentException e) {
             System.out.println("Something went wrong: " + e.getMessage());
-        } catch (InputMismatchException e) {
-            System.out.println("Input a number. You did  input: " + scanner.nextLine());
         }
 
 

@@ -7,13 +7,14 @@ public class DemoWithDraw {
         Scanner scanner = new Scanner(System.in);
         BankAccount account = new BankAccount(100);
 
+        System.out.println("Current Account Balance: " + account.getBalance());
+
+        System.out.println("Enter an amount to withdraw: ");
+        int amount = scanner.nextInt();
+
         try {
-            System.out.println("Current Account Balance: " + account.getBalance());
-
-            System.out.println("Enter an amount to withdraw:");
-            int amount = scanner.nextInt();
-
             account.withdraw(amount);
+            System.out.println("Everything was fine!");
         } catch (IllegalArgumentException e) {
             System.out.println("Something went wrong: " + e.getMessage());
         }

@@ -28,13 +28,27 @@ class Exercise {
     @Test
     void negativeAmountException() {
         BankAccount bankAccount = new BankAccount(100);
-        bankAccount.deposit(-10);
+
+        assertThrows(NegativeDepositException.class,
+                ()-> {bankAccount.deposit(-10);}
+        );
+
+        assertEquals(100, bankAccount.getBalance());
     }
 
     @Test
     void largeAmountException() {
         BankAccount bankAccount = new BankAccount(100);
-        bankAccount.deposit(1000);
+        ;
+
+        WarningLargeDeposit exception = assertThrows(WarningLargeDeposit.class,
+                ()-> {bankAccount.deposit(200_000);}
+        );
+
+        assertEquals(200_000,exception.getAmount());
+
+        assertEquals(100, bankAccount.getBalance());
+
     }
 
 

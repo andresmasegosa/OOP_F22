@@ -14,13 +14,7 @@ public class DemoWithDraw {
 
         int amount = scanner.nextInt();
 
-        try {
-            account.withdraw(amount);
-        } catch (NegativeAmountException e) {
-            System.out.println("Amount cannot be negative!");
-        } catch (InsufficientFundsException e) {
-            System.out.println("You are short: " + e.getDeficit());
-        }
+        account.withdraw(amount);
 
     }
 }

@@ -5,8 +5,8 @@ import java.util.Scanner;
 /**
  *  Exercise:
  *
- *  - Introduce changes in the deposit method of the
- *    BankAccount to avoid that a negative
+ *  - Introduce changes in the "deposit" method of the
+ *    class BankAccount to avoid that a negative
  *    quantity can be deposited using a custom
  *    exception "NegativeDepositException".
  *
@@ -28,7 +28,15 @@ public class Exercise {
         System.out.println("Enter an amount to deposit:");
         int amount = scanner.nextInt();
 
-        account.deposit(amount);
+        try {
+            account.deposit(amount);
+        }catch (NegativeDepositException e){
+            System.out.println("Man, you were trying to deposit a negative ammount");
+        }catch (WarningLargeDeposit e){
+            System.out.println("You must justify the origin of the" + e.getAmount()+" your " +
+                    "are trying to deposit here. Remeber the limit in your country" +
+                    "is "+e.getDepositLimit());
+        }
 
         /***** UNCOMMENT BELOW TO PROVIDE FEEDBACK ****/
         /*
