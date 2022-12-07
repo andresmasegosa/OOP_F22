@@ -17,6 +17,8 @@ public class MathExpression implements Iterable<Node> {
                 nodeList.add(new SumNode(stringPart));
             else if (EqualNode.detectNode(stringPart))
                 nodeList.add(new EqualNode(stringPart));
+            else if (SubtractionNode.detectNode(stringPart))
+                nodeList.add(new SubtractionNode(stringPart));
         }
     }
 

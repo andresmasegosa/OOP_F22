@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Hints:
  *  - Create a class: "SubtractionNode".
  *  - Update MathExpression's parse method.
- *  - Update the CountOperations class.
+ *  - Update the Visitor interface and the CountOperations class.
  */
 
 public class Exercise1 {

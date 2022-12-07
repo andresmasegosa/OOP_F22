@@ -2,6 +2,7 @@ package session13.visitors;
 
 import session13.mathexpression.EqualNode;
 import session13.mathexpression.IntegerNode;
+import session13.mathexpression.SubtractionNode;
 import session13.mathexpression.SumNode;
 
 public class CountOperations implements Visitor{
@@ -21,6 +22,11 @@ public class CountOperations implements Visitor{
     @Override
     public void visit(EqualNode node) {
 
+    }
+
+    @Override
+    public void visit(SubtractionNode node) {
+        num_operations++;
     }
 
     @Override

@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class Exercise2 {
 
     public static void main(String[] args) {
-        System.out.println("Enter the math expression (e.g., 3 + 2 = )");
+        System.out.println("Enter the math expression (e.g., 3 + 2 + 4 - 5 + 10 = )");
         Scanner in = new Scanner(System.in);
         String line = in.nextLine();
         System.out.println();
@@ -35,7 +35,7 @@ public class Exercise2 {
 
 
         System.out.println("Evaluating the expression: ");
-        Visitor evaluator = null;
+        Visitor evaluator = new EvaluatorProposal1();
 
         for (Node node : mathExpression) {
             node.accept(evaluator);

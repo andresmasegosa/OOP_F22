@@ -8,4 +8,8 @@ public abstract class Node implements Element {
     public Node(String string) {
         this.string = string;
     }
+
+    public String getString() {
+        return string;
+    }
 }
